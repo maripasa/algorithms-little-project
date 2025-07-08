@@ -1,0 +1,58 @@
+# 🔍 Comparação de Algoritmos: Par de Pontos Mais Próximos em 2D
+
+Este projeto realiza uma comparação experimental entre dois algoritmos que resolvem o problema do *Par de Pontos Mais Próximos* em um plano bidimensional:
+
+- 🟧 *Força Bruta* (O(n²))
+- 🔷 *Divisão e Conquista* (O(n log n))
+
+---
+
+## ✨ Objetivo
+
+Comparar o desempenho dos algoritmos em tempo de execução conforme o tamanho da entrada varia, garantindo que ambos retornem a mesma resposta (isto é, a menor distância entre dois pontos no plano).
+
+---
+
+## ⚙️ Descrição dos Algoritmos
+
+### 📌 Força Bruta
+Percorre todos os pares de pontos possíveis e calcula a distância entre eles, mantendo o par com menor distância. Simples, mas ineficiente para conjuntos grandes de pontos.
+
+### 📌 Divisão e Conquista
+Ordena os pontos, divide o plano verticalmente e resolve recursivamente o problema nos subespaços, aproveitando propriedades geométricas para reduzir o número de comparações. Mais eficiente, especialmente para grandes entradas.
+
+---
+
+## 🔬 Metodologia Experimental
+
+- *k ∈ [100, 200]* tamanhos distintos de entrada n sorteados automaticamente, variando entre *10 e 10.000*, igualmente espaçados.
+- *m ∈ [10, 20]* execuções por tamanho de entrada, também sorteado aleatoriamente.
+- As entradas são vetores de pontos 2D com coordenadas reais entre [-2n, 2n].
+- Ambos os algoritmos são executados com o *mesmo conjunto de entrada*.
+- Comparamos se os algoritmos retornam distâncias idênticas (com tolerância de até 6 casas decimais).
+- O tempo de execução é medido com time.perf_counter().
+
+---
+
+## 📊 Gráfico de Desempenho
+
+O gráfico abaixo mostra o tempo médio de execução de cada algoritmo em função do tamanho da entrada. As barras verticais representam o *desvio padrão*.
+
+![Gráfico de Desempenho](grafico_par_pontos_mais_proximos.png)
+
+---
+
+## 🎥 Vídeo Explicativo
+
+Assista à explicação completa do projeto no YouTube:  
+[Clique aqui para assistir](https://www.youtube.com/watch?v=FXOl_YwEmas)
+---
+
+## 📁 Arquivos no Repositório
+
+| Arquivo                               | Descrição |
+|--------------------------------------|-----------|
+| algorithms.py                      | Implementações dos dois algoritmos. |
+| simulate.py                        | Script que gera as entradas, executa os testes e plota os gráficos. |
+| grafico_par_pontos_mais_proximos.png | Gráfico comparativo gerado. |
+| resultados_tempos.csv             | Dados brutos com todos os tempos medidos. |

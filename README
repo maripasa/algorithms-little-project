@@ -38,7 +38,7 @@ Ordena os pontos, divide o plano verticalmente e resolve recursivamente o proble
 
 O gráfico abaixo mostra o tempo médio de execução de cada algoritmo em função do tamanho da entrada. As barras verticais representam o *desvio padrão*.
 
-![Gráfico de Desempenho](grafico_par_pontos_mais_proximos.png)
+![Gráfico de Desempenho](./grafico_par_pontos_mais_proximos.png)
 
 ---
 
